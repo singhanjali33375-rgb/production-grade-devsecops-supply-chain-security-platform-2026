@@ -1,0 +1,30 @@
+name: Secure CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-secure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run SAST (Semgrep)
+        uses: returntocorp/semgrep-action@v1
+
+      - name: Build Docker Image
+        run: docker build -t secure-app .
+
+      - name: Run Trivy Scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: secure-app
+          severity: CRITICAL,HIGH
+
+      - name: Generate SBOM
+        run: bash security/generate-sbom.sh
+
+      - name: Sign Image
+        run: bash security/cosign-sign.sh

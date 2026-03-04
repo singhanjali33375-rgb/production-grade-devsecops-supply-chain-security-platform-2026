@@ -113,9 +113,26 @@ devsecops-supply-chain-security-platform/
 │
 ├── README.md
 └── architecture.png
+🔏 Supply Chain Integrity Controls
+SBOM generation for artifact transparency
+Image signing & verification
+Provenance tracking
+Policy-based admission control
+🧩 Compliance Alignment
+SLSA framework alignment
+Zero Trust networking
+Least privilege runtime policies
+📈 Career Relevance (2026 Market)
+This project reflects real-world enterprise
+This project reflects real-world enterprise security architecture used by large-scale organizations focusing on:
+Cloud-native security
+Secure CI/CD pipelines
+Software supply chain integrity
+Kubernetes governance
 
 🔥(Short Version)
 “Designed and implemented a Production-Grade DevSecOps Supply Chain Security Platform integrating SAST, SCA, SBOM generation, container signing (Cosign), SLSA compliance, Kubernetes policy enforcement, and runtime security monitoring.”
 👩‍💻 Author
 Anjali Singh
 DevOps & Cloud Native Security Enthusiast
+

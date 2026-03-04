@@ -1,0 +1,4 @@
+scan:
+  severity:
+    - CRITICAL
+    - HIGH

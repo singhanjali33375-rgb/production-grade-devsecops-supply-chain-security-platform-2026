@@ -1,0 +1,5 @@
+- rule: Unexpected Shell in Container
+  desc: Detect shell spawned inside container
+  condition: spawned_process and container
+  output: "Shell spawned in container"
+  priority: WARNING

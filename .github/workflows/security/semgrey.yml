@@ -1,0 +1,5 @@
+rules:
+  - id: python-dangerous-eval
+    pattern: eval(...)
+    message: Avoid using eval()
+    severity: ERROR
